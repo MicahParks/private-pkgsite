@@ -28,9 +28,10 @@ ___
 - [x] Ability to read project repositories with non-permissive licences.
 - [ ] Private GitLab with custom HTTPS certificate.
 - [ ] Private network with gateway HTTP proxy.
-
+___
 
 
 # License
 Please note that this repository is under the MIT license, but the `pkgsite` project has its own version of a permissive
-license. Additionally, the [athens](https://github.com/gomods/athens) project is 
+license. Additionally, the [athens](https://github.com/gomods/athens) project is under the MIT license, but has
+dependencies with other licences.
