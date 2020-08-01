@@ -11,7 +11,7 @@ RUN git clone "https://go.googlesource.com/pkgsite" && \
 cd pkgsite && \
 
 # TODO Try to use the latest commit. This is the most recent commit that is know to work with this project: 2020/08/01
-# TODO git checkout the latest commit.
+git checkout 94d940ab81bcb78978c6f28b8a265b418a7054e0 && \
 
 # Bind the service to 0.0.0.0 so Docker can use it.
 sed -i 's|addr := cfg.HostAddr("localhost:8080")|addr := cfg.HostAddr("0.0.0.0:8080")|' cmd/frontend/main.go && \
