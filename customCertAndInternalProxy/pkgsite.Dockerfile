@@ -10,6 +10,9 @@ ENV HTTPS_PROXY http://internal.proxy.com:80
 RUN git clone "https://go.googlesource.com/pkgsite" && \
 cd pkgsite && \
 
+# TODO Try to use the latest commit. This is the most recent commit that is know to work with this project: 2020/08/01
+# TODO git checkout the latest commit.
+
 # Bind the service to 0.0.0.0 so Docker can use it.
 sed -i 's|addr := cfg.HostAddr("localhost:8080")|addr := cfg.HostAddr("0.0.0.0:8080")|' cmd/frontend/main.go && \
 
