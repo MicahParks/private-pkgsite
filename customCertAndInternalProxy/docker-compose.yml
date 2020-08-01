@@ -21,6 +21,7 @@ services:
       context: "."
 
     # Set the environment variables to save the athens cache to disk and not use public sumdb for internal GitLab.
+    # You can find additional athens config options here: https://github.com/gomods/athens/blob/main/config.dev.toml
     environment:
       ATHENS_DISK_STORAGE_ROOT: "/athensStorage"
       ATHENS_GONOSUM_PATTERNS: "gitlab.internal.company.com" # TODO Edit this.
