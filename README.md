@@ -36,4 +36,5 @@ ___
 # License
 Please note that this repository is under the MIT license, but the [pkgsite](https://go.googlesource.com/pkgsite)
 project has its own version of a permissive license. Additionally, the [athens](https://github.com/gomods/athens)
-project is under the MIT license, but has dependencies with other licences.
+project is under the MIT license, but has dependencies with other licences. `athens` is used as a replacement for
+[proxy.golang.org](https://proxy.golang.org).
