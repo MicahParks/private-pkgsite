@@ -1,0 +1,3 @@
+-----BEGIN CERTIFICATE-----
+# TODO Add custom cert to trust for private GitLab.
+-----END CERTIFICATE-----

@@ -1,0 +1,34 @@
+version: "3"
+services:
+
+  # The pkgsite container.
+  pkgsite:
+    build:
+      dockerfile: "pkgsite.Dockerfile"
+      context: "."
+
+    # Tell the pkgsite container to use the athens container as proxy.golang.org.
+    command: "/pkgsite -direct_proxy -proxy_url http://athens:3000"
+
+    # Host the service publicly.
+    ports:
+      - "8080:8080" # TODO Edit port.
+
+  # The athens container
+  athens:
+    build:
+      dockerfile: "athens.Dockerfile"
+      context: "."
+
+    # Set the environment variables to save the athens cache to disk and not use public sumdb for internal GitLab.
+    # You can find additional athens config options here: https://github.com/gomods/athens/blob/main/config.dev.toml
+    environment:
+      ATHENS_DISK_STORAGE_ROOT: "/athensStorage"
+      ATHENS_GONOSUM_PATTERNS: "gitlab.internal.company.com" # TODO Edit this.
+      ATHENS_STORAGE_TYPE: "disk"
+      NO_PROXY: "gitlab.internal.company.com" # TODO Edit this.
+
+    # Mount the .netrc in $HOME/.netrc and make a disk volume mount for athens cache.
+    volumes:
+      - "./.netrc:/root/.netrc"
+      - "./athensStorage:/athensStorage"
