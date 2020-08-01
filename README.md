@@ -8,7 +8,7 @@ This project has four directories representing use cases. They are somewhat intu
 the set of features this project offers.
 
 
-## Features of directories:
+## Features of directories with stubs inside:
 `customCertAndInternalProxy`
 - [x] Ability to read project repositories with non-permissive licences.
 - [x] Private GitLab with custom HTTPS certificate.
