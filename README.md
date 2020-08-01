@@ -7,6 +7,8 @@ documentation with support for Go modules.
 This project has four directories representing use cases. They are somewhat intuitively named and contain a subset of
 the set of features this project offers.
 
+Please view the directory most closley matching your use case for a `README.md` with instructions.
+
 
 ## Features of directories with stubs inside:
 `customCertAndInternalProxy`
